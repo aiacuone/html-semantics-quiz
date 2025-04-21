@@ -260,4 +260,144 @@ export const questions: Question[] = [
     explanation:
       'The <fieldset> element is used to group related form controls and labels.',
   },
+  {
+    id: 31,
+    question:
+      'In what order should heading elements typically appear in a document?',
+    options: [
+      'Any order is fine as long as they look right',
+      'Start with h1 and use h2-h6 in sequential order without skipping levels',
+      'Use h1-h6 in any order based on design needs',
+      'Only the visual size matters, not the heading level',
+    ],
+    correctAnswer:
+      'Start with h1 and use h2-h6 in sequential order without skipping levels',
+    explanation:
+      'Heading elements should follow a logical hierarchy starting with one <h1> per page, followed by h2-h6 in sequential order without skipping levels. This maintains proper document outline and accessibility.',
+  },
+  {
+    id: 32,
+    question: 'When should you use <article> versus <section> elements?',
+    options: [
+      '<article> is for blog posts only, <section> is for everything else',
+      '<article> for independent content, <section> for thematic grouping',
+      'They are interchangeable, use either one',
+      '<section> is for articles, <article> is for sections',
+    ],
+    correctAnswer:
+      '<article> for independent content, <section> for thematic grouping',
+    explanation:
+      "Use <article> for self-contained content that could be distributed independently (like blog posts, news articles, comments). Use <section> for thematic grouping of content that makes sense together but isn't necessarily independent.",
+  },
+  {
+    id: 33,
+    question:
+      'What is the correct nesting pattern for a typical web page layout?',
+    options: [
+      '<main> inside <header>, then <article>',
+      '<body> > <header>, <main>, <footer> with <nav> typically in header',
+      '<div> elements for all major sections',
+      'Put everything inside <main>',
+    ],
+    correctAnswer:
+      '<body> > <header>, <main>, <footer> with <nav> typically in header',
+    explanation:
+      'A semantic page structure typically has <header> (containing navigation), <main> (primary content), and <footer> as direct children of <body>. This provides a clear document outline and improves accessibility.',
+  },
+  {
+    id: 34,
+    question: 'How should content within an <article> element be structured?',
+    options: [
+      'No specific structure needed',
+      '<header> with title, content sections, optional <footer>',
+      'Just paragraphs of text',
+      'Only <div> elements allowed',
+    ],
+    correctAnswer: '<header> with title, content sections, optional <footer>',
+    explanation:
+      "An <article> should typically contain a <header> with the article's title (using appropriate heading level), followed by content (which may include <section> elements), and optionally a <footer> for metadata like author, date, etc.",
+  },
+  {
+    id: 35,
+    question: 'What is the proper way to structure a <section> element?',
+    options: [
+      'Any content without a heading is fine',
+      'Must start with a heading element (h1-h6)',
+      'Only paragraph content allowed',
+      'Headings are optional in sections',
+    ],
+    correctAnswer: 'Must start with a heading element (h1-h6)',
+    explanation:
+      'Each <section> element should begin with a heading element (h1-h6) that describes its content. This creates a proper document outline and helps with accessibility and navigation.',
+  },
+  {
+    id: 36,
+    question:
+      'What is the correct way to structure a blog homepage with multiple articles?',
+    options: [
+      '<div> elements for each blog post',
+      '<main> containing multiple <article> elements',
+      'One big <section> with all posts',
+      'Separate <main> for each post',
+    ],
+    correctAnswer: '<main> containing multiple <article> elements',
+    explanation:
+      'A blog homepage should use <main> as the primary content container, with each blog post preview wrapped in its own <article> element. This maintains proper semantic structure and indicates that each post is a self-contained piece of content.',
+  },
+  {
+    id: 37,
+    question:
+      'How should sidebar content be structured in relation to the main content?',
+    options: [
+      'Inside <main> alongside primary content',
+      'As an <aside> element outside of <main>',
+      'Using <div> elements anywhere',
+      'Inside <footer> at the bottom',
+    ],
+    correctAnswer: 'As an <aside> element outside of <main>',
+    explanation:
+      'Sidebar content should be placed in an <aside> element at the same level as <main>, not inside it. This indicates that the content is complementary to the main content but not part of the primary content flow.',
+  },
+  {
+    id: 38,
+    question:
+      'What is the proper nesting order for a complex article with multiple sections?',
+    options: [
+      '<article> > <section>s > headings > content',
+      '<section> > <article> > content',
+      'Mix <article> and <section> freely',
+      'Only use <div> elements for sections',
+    ],
+    correctAnswer: '<article> > <section>s > headings > content',
+    explanation:
+      'For a complex article, start with an <article> container, then divide it into <section>s as needed. Each section should start with an appropriate heading level, followed by its content. This creates a clear content hierarchy.',
+  },
+  {
+    id: 39,
+    question:
+      'Where should navigation elements be placed in a semantic layout?',
+    options: [
+      'Anywhere convenient in the design',
+      'Primary in <header>, secondary possible in <aside> or <footer>',
+      'Only in <main>',
+      'Only at the bottom in <footer>',
+    ],
+    correctAnswer:
+      'Primary in <header>, secondary possible in <aside> or <footer>',
+    explanation:
+      'Primary navigation should be placed within the <header> element using <nav>. Secondary navigation can be placed in <aside> for sidebar navigation or <footer> for additional links. This follows common web patterns and user expectations.',
+  },
+  {
+    id: 40,
+    question: 'How should related content be grouped within a <main> element?',
+    options: [
+      'Using only <div> elements',
+      'Using <section> elements with proper headings',
+      'No grouping needed',
+      'Using random elements as needed',
+    ],
+    correctAnswer: 'Using <section> elements with proper headings',
+    explanation:
+      'Related content within <main> should be grouped using <section> elements, each with its own heading that describes the content. This creates a logical document outline and improves navigation and accessibility.',
+  },
 ];

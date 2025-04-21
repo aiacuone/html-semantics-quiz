@@ -84,25 +84,25 @@ const Quiz = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 py-8 px-4">
+    <div className="py-3 px-2 flex justify-center items-center">
       <div className="max-w-2xl mx-auto">
-        <div className="bg-white rounded-lg shadow-lg p-6">
-          <div className="flex justify-between items-center mb-6">
-            <span className="text-lg font-semibold">
+        <div className="bg-white rounded-lg shadow-lg pt-2 pb-4 px-4">
+          <div className="flex justify-between items-center mb-2 text-sm">
+            <span className="font-semibold">
               Question {currentQuestionIndex + 1}/10
             </span>
-            <span className="text-lg font-semibold">Score: {score}</span>
+            <span className="font-semibold">Score: {score}</span>
           </div>
 
-          <h2 className="text-xl font-bold mb-6">{currentQuestion.question}</h2>
+          <h2 className="text-xl font-bold mb-2">{currentQuestion.question}</h2>
 
-          <div className="space-y-4">
+          <div className="space-y-3">
             {currentQuestion.options.map((option) => (
               <button
                 key={option}
                 onClick={() => handleAnswerSelect(option)}
                 disabled={selectedAnswer !== null}
-                className={`w-full p-4 text-left rounded-lg transition-colors ${
+                className={`w-full p-2 text-left rounded-lg transition-colors ${
                   selectedAnswer === null
                     ? 'hover:bg-blue-50 bg-gray-50'
                     : selectedAnswer === option
@@ -122,18 +122,18 @@ const Quiz = () => {
           </div>
 
           {showExplanation && (
-            <div className="mt-6 p-4 bg-blue-50 rounded-lg">
+            <div className="mt-2 p-2 bg-blue-50 rounded-lg text-sm">
               <p className="text-blue-800">{currentQuestion.explanation}</p>
             </div>
           )}
 
           {selectedAnswer && (
-            <div className="mt-6 flex justify-center">
+            <div className="mt-2 flex justify-center">
               <button
                 onClick={handleNextQuestion}
-                className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors"
+                className="bg-blue-500 text-white px-3 py-1 rounded-lg hover:bg-blue-600 transition-colors"
               >
-                {currentQuestionIndex === 9 ? 'Finish Quiz' : 'Next Question'}
+                {currentQuestionIndex === 9 ? 'Finish' : 'Next'}
               </button>
             </div>
           )}
